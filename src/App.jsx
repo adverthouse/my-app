@@ -5,7 +5,9 @@ import Contact from './Screens/Contact';
 import Blog from './Screens/Blog/Blog';
 import BlogCategories from './Screens/Blog/BlogCategories';
 import BlogPost from './Screens/Blog/BlogPost';
-import BlogLayout from './Screens/Blog/BlogLayout';
+import BlogLayout from './Screens/Blog';
+import NotFound from './Screens/NotFound';
+
 
 function App() {
   const getDescr = (isActive) => {
@@ -31,8 +33,9 @@ function App() {
           <Route path='/blog' element={ <BlogLayout /> }>
              <Route index={true} element={<Blog />} />
              <Route path='categories' element={ <BlogCategories /> } />
-             <Route path='post/:url' element={ <BlogPost /> } />
+             <Route path='post/:url' element={ <BlogPost /> } />             
           </Route>
+          <Route path='*' element={ <NotFound />} />
       </Routes>
       </>
   );

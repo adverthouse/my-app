@@ -8,9 +8,7 @@ class BlogLayout extends Component {
         return (
             <>
                 <p>Bu bir layout sayfası</p>
-                <Outlet>
-                   <p>blog</p>
-                </Outlet>
+                <Outlet />
             </>
         );
     }
